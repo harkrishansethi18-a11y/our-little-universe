@@ -15,9 +15,9 @@
     
     <style>
         :root {
-            --bg-dark: #0a0203;
-            --bg-card: #160507;
-            --bg-card-hover: #22080b;
+            --bg-dark: #070102;
+            --bg-card: #140406;
+            --bg-card-hover: #1f0709;
             --crimson: #800c19;
             --rose-red: #c0152b;
             --gold: #dfa857;
@@ -47,6 +47,7 @@
             line-height: 1.6;
         }
 
+        /* Stars Canvas */
         #stars-canvas {
             position: fixed;
             top: 0;
@@ -57,6 +58,7 @@
             pointer-events: none;
         }
 
+        /* Floating Hearts */
         .hearts-container {
             position: fixed;
             top: 0;
@@ -81,15 +83,16 @@
             100% { transform: translateY(-10vh) scale(1.1) rotate(360deg); opacity: 0; }
         }
 
+        /* Navigation Header */
         header {
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 100;
-            background: rgba(10, 2, 3, 0.85);
+            background: rgba(7, 1, 2, 0.88);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border-color);
-            padding: 15px 30px;
+            padding: 12px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -97,7 +100,7 @@
 
         .logo {
             font-family: var(--font-serif);
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             color: var(--gold);
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -108,13 +111,14 @@
         nav ul {
             display: flex;
             list-style: none;
-            gap: 20px;
+            gap: 15px;
+            align-items: center;
         }
 
         nav a {
             color: var(--text-muted);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
             letter-spacing: 1px;
             transition: all 0.3s;
@@ -125,19 +129,41 @@
             text-shadow: 0 0 8px rgba(223, 168, 87, 0.5);
         }
 
+        .save-header-btn {
+            background: linear-gradient(45deg, var(--gold), #b88330);
+            color: #1a0205;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 0 15px rgba(223, 168, 87, 0.4);
+            transition: all 0.3s;
+        }
+
+        .save-header-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 22px rgba(223, 168, 87, 0.7);
+        }
+
+        /* Music Floating Bar */
         .music-bar {
             position: fixed;
             bottom: 25px;
             right: 25px;
             z-index: 99;
-            background: rgba(22, 5, 7, 0.9);
+            background: rgba(20, 4, 6, 0.92);
             border: 1px solid var(--gold);
             padding: 10px 20px;
             border-radius: 50px;
             display: flex;
             align-items: center;
             gap: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.8);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.8);
             backdrop-filter: blur(8px);
         }
 
@@ -165,6 +191,7 @@
             font-weight: 600;
         }
 
+        /* Layout Structure */
         section {
             position: relative;
             z-index: 2;
@@ -175,7 +202,7 @@
 
         .section-title {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
 
         .section-title h2 {
@@ -193,6 +220,7 @@
             color: var(--pink-soft);
         }
 
+        /* Hero Section */
         #hero {
             height: 100vh;
             display: flex;
@@ -222,6 +250,7 @@
             text-shadow: 0 10px 30px rgba(0,0,0,0.8);
         }
 
+        /* Counter */
         .timer-grid {
             display: flex;
             gap: 20px;
@@ -231,7 +260,7 @@
         }
 
         .timer-box {
-            background: rgba(22, 5, 7, 0.8);
+            background: rgba(20, 4, 6, 0.85);
             border: 1px solid var(--border-color);
             padding: 20px;
             border-radius: 12px;
@@ -261,6 +290,7 @@
             color: var(--text-muted);
         }
 
+        /* Timeline Section */
         .timeline {
             position: relative;
             max-width: 900px;
@@ -305,7 +335,6 @@
 
         .left { left: 0; }
         .right { left: 50%; }
-
         .right::after { left: -15px; }
 
         .timeline-content {
@@ -337,6 +366,7 @@
             margin-bottom: 10px;
         }
 
+        /* Interactive Games */
         .games-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -394,42 +424,77 @@
             box-shadow: 0 6px 20px rgba(192, 21, 43, 0.7);
         }
 
+        /* Photo Scrapbook Gallery */
+        .gallery-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 35px;
+            flex-wrap: wrap;
+        }
+
+        .gallery-action-btn {
+            background: linear-gradient(45deg, var(--crimson), var(--rose-red));
+            color: white;
+            border: 1px solid var(--gold);
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            transition: all 0.3s;
+        }
+
+        .gallery-action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(192, 21, 43, 0.6);
+        }
+
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 25px;
         }
 
         .polaroid {
             background: #fff;
-            padding: 15px 15px 25px 15px;
+            padding: 14px 14px 22px 14px;
             border-radius: 4px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.8);
             transform: rotate(-2deg);
             transition: all 0.4s ease;
-            cursor: pointer;
+            position: relative;
         }
 
         .polaroid:nth-child(even) {
             transform: rotate(3deg);
         }
 
+        .polaroid:nth-child(3n) {
+            transform: rotate(-1deg);
+        }
+
         .polaroid:hover {
-            transform: scale(1.08) rotate(0deg);
+            transform: scale(1.06) rotate(0deg);
             z-index: 10;
             box-shadow: 0 20px 40px rgba(192, 21, 43, 0.5);
         }
 
         .polaroid-img-frame {
             width: 100%;
-            height: 280px;
-            background: var(--bg-card);
+            height: 260px;
+            background: #1a0508;
             overflow: hidden;
             border-radius: 2px;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
+            cursor: pointer;
         }
 
         .polaroid-img-frame img {
@@ -438,15 +503,50 @@
             object-fit: cover;
         }
 
-        .polaroid-caption {
-            font-family: var(--font-hand);
-            font-size: 1.5rem;
-            color: #1a0508;
-            text-align: center;
-            margin-top: 15px;
-            font-weight: 700;
+        .upload-overlay {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: rgba(10, 2, 3, 0.85);
+            border: 1px solid var(--gold);
+            color: var(--gold-light);
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 5;
         }
 
+        .upload-overlay:hover {
+            transform: scale(1.15);
+            background: var(--rose-red);
+            color: white;
+        }
+
+        .polaroid-caption-input {
+            width: 100%;
+            border: none;
+            background: transparent;
+            font-family: var(--font-hand);
+            font-size: 1.4rem;
+            color: #1a0508;
+            text-align: center;
+            margin-top: 12px;
+            font-weight: 700;
+            outline: none;
+            border-bottom: 1px dashed transparent;
+            transition: border 0.3s;
+        }
+
+        .polaroid-caption-input:focus {
+            border-bottom: 1px dashed var(--rose-red);
+        }
+
+        /* Poetry Chamber */
         .poetry-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -454,7 +554,7 @@
         }
 
         .poetry-card {
-            background: rgba(22, 5, 7, 0.85);
+            background: rgba(20, 4, 6, 0.88);
             border: 1px solid var(--border-color);
             padding: 35px;
             border-radius: 15px;
@@ -490,6 +590,7 @@
             letter-spacing: 2px;
         }
 
+        /* Quiz Container */
         .quiz-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -514,7 +615,7 @@
         }
 
         .quiz-opt-btn {
-            background: rgba(10, 2, 3, 0.6);
+            background: rgba(7, 1, 2, 0.6);
             border: 1px solid var(--border-color);
             color: var(--text-main);
             padding: 15px 20px;
@@ -540,6 +641,7 @@
             border-color: #ef5350;
         }
 
+        /* Future Wishes Map */
         .wishes-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -566,6 +668,7 @@
             margin-bottom: 15px;
         }
 
+        /* Secret Letter Envelope */
         .envelope-wrapper {
             max-width: 650px;
             margin: 0 auto;
@@ -629,6 +732,7 @@
             color: var(--pink-soft);
         }
 
+        /* Modal Lightbox */
         .modal {
             display: none;
             position: fixed;
@@ -636,7 +740,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.9);
+            background: rgba(0,0,0,0.92);
             z-index: 1000;
             justify-content: center;
             align-items: center;
@@ -645,12 +749,21 @@
 
         .modal-content {
             max-width: 800px;
+            width: 90%;
             background: var(--bg-card);
             border: 1px solid var(--gold);
             border-radius: 15px;
-            padding: 30px;
+            padding: 25px;
             text-align: center;
             position: relative;
+        }
+
+        .modal-img {
+            max-width: 100%;
+            max-height: 65vh;
+            border-radius: 8px;
+            object-fit: contain;
+            margin-bottom: 15px;
         }
 
         .close-modal {
@@ -681,12 +794,17 @@
         <div class="logo">Hk & Gaurii 💖</div>
         <nav>
             <ul>
-                <li><a href="#story">Our Story</a></li>
-                <li><a href="#games">Fun Vault</a></li>
+                <li><a href="#story">Story</a></li>
+                <li><a href="#games">Vault</a></li>
                 <li><a href="#gallery">Scrapbook</a></li>
                 <li><a href="#poetry">Shayari</a></li>
-                <li><a href="#quiz">Lore Quiz</a></li>
-                <li><a href="#letter">Secret Letter</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#letter">Letter</a></li>
+                <li>
+                    <button class="save-header-btn" onclick="saveAllPhotos()">
+                        <i class="fa-solid fa-floppy-disk"></i> Save Memories
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
@@ -698,6 +816,7 @@
         <span class="music-text">Invisible Strings & Tum Ho (Ambient Vibe)</span>
     </div>
 
+    <!-- Hero -->
     <section id="hero">
         <div class="hero-subtitle">Nine Months of Belonging & Unlimited Kisses</div>
         <h1 class="hero-title">OUR LITTLE UNIVERSE</h1>
@@ -725,6 +844,7 @@
         </div>
     </section>
 
+    <!-- Story -->
     <section id="story">
         <div class="section-title">
             <h2>The Chapters of Us</h2>
@@ -790,6 +910,7 @@
         </div>
     </section>
 
+    <!-- Mini Games -->
     <section id="games">
         <div class="section-title">
             <h2>Gaurii's Fun Vault</h2>
@@ -820,79 +941,28 @@
         </div>
     </section>
 
+    <!-- Scrapbook Gallery with Permanent Custom Slots -->
     <section id="gallery">
         <div class="section-title">
-            <h2>Our Memories Museum</h2>
-            <p>Interactive polaroid scrapbook of all our real moments together</p>
+            <h2>Our Memories Museum (18 Slots)</h2>
+            <p>Click the 📷 icon on any polaroid to upload your custom photos & click Save!</p>
         </div>
 
-        <div class="gallery-grid">
-            <!-- 1. Pink Suit -->
-            <div class="polaroid" onclick="openModal('Pink Suit Apsara', 'The stunning pink suit moment when you looked like an absolute divine vision.')">
-                <div class="polaroid-img-frame">
-                    <img src="data:image/jpeg;base64,..." alt="Pink Suit">
-                </div>
-                <div class="polaroid-caption">Pink Suit Magic ✨</div>
-            </div>
+        <div class="gallery-controls">
+            <button class="gallery-action-btn" onclick="saveAllPhotos()">
+                <i class="fa-solid fa-floppy-disk"></i> 💾 SAVE ALL MEMORIES PERMANENTLY
+            </button>
+            <button class="gallery-action-btn" style="background: rgba(255,255,255,0.1);" onclick="resetPhotos()">
+                <i class="fa-solid fa-rotate-left"></i> 🔄 Reset All Slots
+            </button>
+        </div>
 
-            <!-- 2. Winter Coat -->
-            <div class="polaroid" onclick="openModal('Nainital Vibe & Winter Coat', 'Cold winter breeze, black coat, and your gorgeous smile.')">
-                <div class="polaroid-img-frame">
-                    <img src="data:image/jpeg;base64,..." alt="Winter Coat">
-                </div>
-                <div class="polaroid-caption">Winter & Coat Vibe 🧥</div>
-            </div>
-
-            <!-- 3. Cafe Lean -->
-            <div class="polaroid" onclick="openModal('Cafe Lean & Head on Shoulder', 'Leaning closely together with cozy lights and endless comfort.')">
-                <div class="polaroid-img-frame">
-                    <img src="data:image/jpeg;base64,..." alt="Cafe Lean">
-                </div>
-                <div class="polaroid-caption">Cafe Moments ☕</div>
-            </div>
-
-            <!-- 4. Elevator Roses -->
-            <div class="polaroid" onclick="openModal('Elevator Date with Roses', 'Holding a bouquet of red roses, looking into each other eyes.')">
-                <div class="polaroid-img-frame">
-                    <img src="data:image/jpeg;base64,..." alt="Elevator Roses">
-                </div>
-                <div class="polaroid-caption">Elevator Roses 🌹</div>
-            </div>
-
-            <!-- 5. Royal Lift -->
-            <div class="polaroid" onclick="openModal('Royal Ethnic Lift-Up', 'Kurta and Lehenga royal vibes under the starry night beside the Enfield.')">
-                <div class="polaroid-img-frame">
-                    <img src="data:image/jpeg;base64,..." alt="Royal Lift">
-                </div>
-                <div class="polaroid-caption">Royal Couple 👑</div>
-            </div>
-
-            <!-- 6. Cafe Hug -->
-            <div class="polaroid" onclick="openModal('Warm Cafe Hug', 'A tight, cozy, and loving embrace at the cafe.')">
-                <div class="polaroid-img-frame">
-                    <img src="data:image/jpeg;base64,..." alt="Cafe Hug">
-                </div>
-                <div class="polaroid-caption">Warm Hugs 🤗</div>
-            </div>
-
-            <!-- 7. Cheek Kiss -->
-            <div class="polaroid" onclick="openModal('Sweet Cheek Kiss', 'A warm, affectionate cheek kiss capturing our purest bond.')">
-                <div class="polaroid-img-frame">
-                    <img src="data:image/jpeg;base64,..." alt="Cheek Kiss">
-                </div>
-                <div class="polaroid-caption">Endless Kisses 💕</div>
-            </div>
-
-            <!-- 8. Cinema Date -->
-            <div class="polaroid" onclick="openModal('Cinema Date Moment', 'Movie theatre lights, red ambient glow, and sweet kisses.')">
-                <div class="polaroid-img-frame">
-                    <img src="data:image/jpeg;base64,..." alt="Cinema Date">
-                </div>
-                <div class="polaroid-caption">Cinema Date 🎬</div>
-            </div>
+        <div class="gallery-grid" id="polaroid-container">
+            <!-- 18 Polaroid slots dynamically generated by JS -->
         </div>
     </section>
 
+    <!-- Poetry -->
     <section id="poetry">
         <div class="section-title">
             <h2>Shayari & Poetries</h2>
@@ -946,6 +1016,7 @@
         </div>
     </section>
 
+    <!-- Quiz -->
     <section id="quiz">
         <div class="section-title">
             <h2>The Hk-Gaurii Lore Quiz</h2>
@@ -959,6 +1030,7 @@
         </div>
     </section>
 
+    <!-- Future Map -->
     <section id="future">
         <div class="section-title">
             <h2>Our Future Map</h2>
@@ -984,6 +1056,7 @@
         </div>
     </section>
 
+    <!-- Secret Letter -->
     <section id="letter">
         <div class="section-title">
             <h2>The 9-Month Anniversary Letter</h2>
@@ -1010,15 +1083,18 @@
         </div>
     </section>
 
+    <!-- Modal Lightbox -->
     <div class="modal" id="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal()">&times;</span>
-            <h3 id="modal-title" style="color: var(--gold); margin-bottom: 15px; font-family: var(--font-serif);"></h3>
+            <img id="modal-img-element" class="modal-img" src="" alt="Zoomed Photo">
+            <h3 id="modal-title" style="color: var(--gold); margin-bottom: 10px; font-family: var(--font-serif);"></h3>
             <p id="modal-desc" style="color: var(--text-main); font-size: 1.1rem;"></p>
         </div>
     </div>
 
     <script>
+        // 1. Stars Canvas
         const canvas = document.getElementById('stars-canvas');
         const ctx = canvas.getContext('2d');
         let stars = [];
@@ -1062,6 +1138,7 @@
         resizeCanvas();
         drawStars();
 
+        // 2. Floating Hearts
         const heartsBox = document.getElementById('hearts-box');
         const heartIcons = ['fa-heart', 'fa-sparkles', 'fa-hand-holding-heart'];
         for (let i = 0; i < 25; i++) {
@@ -1073,6 +1150,7 @@
             heartsBox.appendChild(heart);
         }
 
+        // 3. Counter (Jan 25, 2026 7:17 AM)
         const startDate = new Date('2026-01-25T07:17:00').getTime();
 
         function updateTimer() {
@@ -1092,6 +1170,97 @@
         setInterval(updateTimer, 1000);
         updateTimer();
 
+        // 4. Default 18 Polaroid Data
+        const defaultPolaroids = [
+            { caption: "Pink Suit Magic ✨", desc: "The stunning pink suit confession night.", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" },
+            { caption: "Winter & Coat Vibe 🧥", desc: "Cold breeze, black coat, and warm smiles.", img: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" },
+            { caption: "Cafe Moments ☕", desc: "Leaning closely with your head on my shoulder.", img: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=600&q=80" },
+            { caption: "Elevator Roses 🌹", desc: "Holding red roses tightly in the mirror selfie.", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80" },
+            { caption: "Royal Couple 👑", desc: "Ethnic Kurta & Lehenga night by the Royal Enfield.", img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=80" },
+            { caption: "Warm Hugs 🤗", desc: "Cozy cafe embrace full of affection.", img: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80" },
+            { caption: "Endless Kisses 💕", desc: "Sweet cheek kisses capturing our bond.", img: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=600&q=80" },
+            { caption: "Cinema Date 🎬", desc: "Recliner seats and sweet movie theater moments.", img: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=600&q=80" },
+            { caption: "Stargazing Night 🌌", desc: "Looking at the sky holding hands.", img: "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=600&q=80" },
+            { caption: "Silly Pouts 😜", desc: "Car rides, wild hair, and laughing out loud.", img: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=600&q=80" },
+            { caption: "Late Night Calls 📱", desc: "5-hour long phone calls until sunrise.", img: "https://images.unsplash.com/photo-1517471927760-7286a1a819b1?auto=format&fit=crop&w=600&q=80" },
+            { caption: "First Date Bon Amigos 🍽️", desc: "7th Feb 2026: Looking into each other's eyes.", img: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=600&q=80" },
+            { caption: "Nainital Journey 🏔️", desc: "Mountain chill and warm tea together.", img: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80" },
+            { caption: "Hand In Hand 🤝", desc: "Two hours of holding hands at Chelvies.", img: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=600&q=80" },
+            { caption: "Flower Surprise 💐", desc: "Sending romantic floral bouquets.", img: "https://images.unsplash.com/photo-1563241527-3004b7be0ffd?auto=format&fit=crop&w=600&q=80" },
+            { caption: "Cuddle Time 🧸", desc: "Baby cuddles and room comfort.", img: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=600&q=80" },
+            { caption: "Sunset Magic 🌅", desc: "Watching golden skies side by side.", img: "https://images.unsplash.com/photo-1495616811223-4d98c6e9c869?auto=format&fit=crop&w=600&q=80" },
+            { caption: "Forever & Always 💍", desc: "Building our dream future together.", img: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=600&q=80" }
+        ];
+
+        let currentPolaroids = [];
+
+        function renderPolaroids() {
+            const container = document.getElementById('polaroid-container');
+            container.innerHTML = '';
+            
+            const savedData = localStorage.getItem('hk_gaurii_photos_v2');
+            if (savedData) {
+                try { currentPolaroids = JSON.parse(savedData); } catch(e) { currentPolaroids = [...defaultPolaroids]; }
+            } else {
+                currentPolaroids = [...defaultPolaroids];
+            }
+
+            currentPolaroids.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.className = 'polaroid';
+                card.innerHTML = `
+                    <div class="upload-overlay" onclick="triggerFileInput(${index})" title="Upload custom photo">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+                    <input type="file" id="file-input-${index}" style="display:none;" accept="image/*" onchange="handleFileSelect(event, ${index})">
+                    <div class="polaroid-img-frame" onclick="openModal('${item.caption.replace(/'/g, "\\'")}', '${item.desc.replace(/'/g, "\\'")}', '${item.img}')">
+                        <img src="${item.img}" id="img-element-${index}" alt="${item.caption}">
+                    </div>
+                    <input type="text" class="polaroid-caption-input" value="${item.caption}" onchange="updateCaption(${index}, this.value)" placeholder="Enter Caption...">
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function triggerFileInput(index) {
+            document.getElementById(`file-input-${index}`).click();
+        }
+
+        function handleFileSelect(event, index) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const base64Img = e.target.result;
+                    currentPolaroids[index].img = base64Img;
+                    document.getElementById(`img-element-${index}`).src = base64Img;
+                    saveAllPhotos();
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function updateCaption(index, val) {
+            currentPolaroids[index].caption = val;
+            saveAllPhotos();
+        }
+
+        function saveAllPhotos() {
+            localStorage.setItem('hk_gaurii_photos_v2', JSON.stringify(currentPolaroids));
+            confetti({ particleCount: 60, spread: 60, origin: { y: 0.8 } });
+            alert("✨ Memories Saved Permanently on this device!");
+        }
+
+        function resetPhotos() {
+            if (confirm("Reset all polaroids to default images?")) {
+                localStorage.removeItem('hk_gaurii_photos_v2');
+                renderPolaroids();
+            }
+        }
+
+        renderPolaroids();
+
+        // 5. Mini Game Functions
         let babyVal = 50;
         function adjustMeter(val) {
             babyVal = Math.min(100, Math.max(0, babyVal + val));
@@ -1107,41 +1276,17 @@
         }
 
         function injectEnergy() {
-            const msg = document.getElementById('capsule-msg');
-            msg.style.display = 'block';
-            confetti({
-                particleCount: 100,
-                spread: 70,
-                origin: { y: 0.6 }
-            });
+            document.getElementById('capsule-msg').style.display = 'block';
+            confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
         }
 
+        // 6. Quiz Logic
         const quizData = [
-            {
-                q: "Where did we have our very first meeting in person?",
-                opts: ["Bon Amigos", "Chelvies Cafe", "Nainital", "Delhi Mall"],
-                correct: 1
-            },
-            {
-                q: "What movie did we watch together on our first meeting date?",
-                opts: ["Rockstar", "Tere Ishk Mein", "Yeh Jawaani Hai Deewani", "Jab We Met"],
-                correct: 1
-            },
-            {
-                q: "What outfit was Gaurika wearing during the famous confession night?",
-                opts: ["Black Coat", "Brown Skirt", "Pink Suit", "Green Kurti"],
-                correct: 2
-            },
-            {
-                q: "What is Gaurii's instant cute reaction after getting kisses?",
-                opts: ["Aww Thank You", "YAYYYYY!", "Stop It Hk", "Hahaha"],
-                correct: 1
-            },
-            {
-                q: "What is our first dream trek location planned for next summer?",
-                opts: ["Kedarnath", "Madhmaheshwar", "Triund", "Manali"],
-                correct: 1
-            }
+            { q: "Where did we have our very first meeting in person?", opts: ["Bon Amigos", "Chelvies Cafe", "Nainital", "Delhi Mall"], correct: 1 },
+            { q: "What movie did we watch together on our first meeting date?", opts: ["Rockstar", "Tere Ishk Mein", "Yeh Jawaani Hai Deewani", "Jab We Met"], correct: 1 },
+            { q: "What outfit was Gaurika wearing during the famous confession night?", opts: ["Black Coat", "Brown Skirt", "Pink Suit", "Green Kurti"], correct: 2 },
+            { q: "What is Gaurii's instant cute reaction after getting kisses?", opts: ["Aww Thank You", "YAYYYYY!", "Stop It Hk", "Hahaha"], correct: 1 },
+            { q: "What is our first dream trek location planned for next summer?", opts: ["Kedarnath", "Madhmaheshwar", "Triund", "Manali"], correct: 1 }
         ];
 
         let qIdx = 0;
@@ -1188,9 +1333,11 @@
         }
         loadQuiz();
 
-        function openModal(title, desc) {
+        // 7. Modal Functions
+        function openModal(title, desc, imgSrc) {
             document.getElementById('modal-title').innerText = title;
             document.getElementById('modal-desc').innerText = desc;
+            document.getElementById('modal-img-element').src = imgSrc;
             document.getElementById('modal').style.display = 'flex';
         }
 
@@ -1198,17 +1345,15 @@
             document.getElementById('modal').style.display = 'none';
         }
 
+        // 8. Secret Letter
         function openLetter() {
             const letter = document.getElementById('secret-letter');
             letter.style.display = 'block';
             letter.scrollIntoView({ behavior: 'smooth' });
-            confetti({
-                particleCount: 200,
-                spread: 100,
-                origin: { y: 0.7 }
-            });
+            confetti({ particleCount: 200, spread: 100, origin: { y: 0.7 } });
         }
 
+        // 9. Audio Toggle
         let isPlaying = false;
         function toggleAudio() {
             const btn = document.getElementById('play-btn');
