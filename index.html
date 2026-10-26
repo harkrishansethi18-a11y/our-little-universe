@@ -47,7 +47,6 @@
             line-height: 1.6;
         }
 
-        /* Background Canvas */
         #stars-canvas {
             position: fixed;
             top: 0;
@@ -58,7 +57,6 @@
             pointer-events: none;
         }
 
-        /* Floating Hearts Container */
         .hearts-container {
             position: fixed;
             top: 0;
@@ -83,7 +81,6 @@
             100% { transform: translateY(-10vh) scale(1.1) rotate(360deg); opacity: 0; }
         }
 
-        /* Navigation Header */
         header {
             position: fixed;
             top: 0;
@@ -128,7 +125,6 @@
             text-shadow: 0 0 8px rgba(223, 168, 87, 0.5);
         }
 
-        /* Audio Bar Floating */
         .music-bar {
             position: fixed;
             bottom: 25px;
@@ -169,7 +165,6 @@
             font-weight: 600;
         }
 
-        /* Layout Structure */
         section {
             position: relative;
             z-index: 2;
@@ -198,7 +193,6 @@
             color: var(--pink-soft);
         }
 
-        /* Hero Section */
         #hero {
             height: 100vh;
             display: flex;
@@ -228,7 +222,6 @@
             text-shadow: 0 10px 30px rgba(0,0,0,0.8);
         }
 
-        /* Counter Styling */
         .timer-grid {
             display: flex;
             gap: 20px;
@@ -268,7 +261,6 @@
             color: var(--text-muted);
         }
 
-        /* Timeline Section */
         .timeline {
             position: relative;
             max-width: 900px;
@@ -345,7 +337,6 @@
             margin-bottom: 10px;
         }
 
-        /* Interactive Mini Games */
         .games-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -403,7 +394,6 @@
             box-shadow: 0 6px 20px rgba(192, 21, 43, 0.7);
         }
 
-        /* Scrapbook Photo Gallery */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -457,7 +447,6 @@
             font-weight: 700;
         }
 
-        /* Poetry Chamber */
         .poetry-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -501,7 +490,6 @@
             letter-spacing: 2px;
         }
 
-        /* Quiz Container */
         .quiz-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -552,7 +540,6 @@
             border-color: #ef5350;
         }
 
-        /* Future Wishes Map */
         .wishes-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -579,7 +566,6 @@
             margin-bottom: 15px;
         }
 
-        /* Secret Letter Envelope */
         .envelope-wrapper {
             max-width: 650px;
             margin: 0 auto;
@@ -643,7 +629,6 @@
             color: var(--pink-soft);
         }
 
-        /* Modal Lightbox */
         .modal {
             display: none;
             position: fixed;
@@ -677,7 +662,6 @@
             cursor: pointer;
         }
 
-        /* Responsive Fixes */
         @media(max-width: 768px) {
             .hero-title { font-size: 2.5rem; }
             .timeline::after { left: 31px; }
@@ -690,13 +674,9 @@
 </head>
 <body>
 
-    <!-- Stars Canvas -->
     <canvas id="stars-canvas"></canvas>
-
-    <!-- Floating Hearts -->
     <div class="hearts-container" id="hearts-box"></div>
 
-    <!-- Header Navigation -->
     <header>
         <div class="logo">Hk & Gaurii 💖</div>
         <nav>
@@ -711,7 +691,6 @@
         </nav>
     </header>
 
-    <!-- Music Player Bar -->
     <div class="music-bar">
         <button class="music-btn" id="play-btn" onclick="toggleAudio()">
             <i class="fa-solid fa-music"></i>
@@ -719,7 +698,6 @@
         <span class="music-text">Invisible Strings & Tum Ho (Ambient Vibe)</span>
     </div>
 
-    <!-- Hero Section -->
     <section id="hero">
         <div class="hero-subtitle">Nine Months of Belonging & Unlimited Kisses</div>
         <h1 class="hero-title">OUR LITTLE UNIVERSE</h1>
@@ -727,7 +705,6 @@
             From an Instagram DM on 8th August 2025 to becoming each other's home on 25th January 2026. Here's to our 9-Month Anniversary, my baby, my Maharani, my forever.
         </p>
 
-        <!-- Relationship Live Counter -->
         <div class="timer-grid">
             <div class="timer-box">
                 <span class="timer-value" id="count-days">00</span>
@@ -748,7 +725,6 @@
         </div>
     </section>
 
-    <!-- Story Timeline -->
     <section id="story">
         <div class="section-title">
             <h2>The Chapters of Us</h2>
@@ -814,7 +790,6 @@
         </div>
     </section>
 
-    <!-- Fun Vault & Interactive Games -->
     <section id="games">
         <div class="section-title">
             <h2>Gaurii's Fun Vault</h2>
@@ -845,7 +820,6 @@
         </div>
     </section>
 
-    <!-- Scrapbook Photo Gallery -->
     <section id="gallery">
         <div class="section-title">
             <h2>Our Memories Museum</h2>
@@ -853,73 +827,72 @@
         </div>
 
         <div class="gallery-grid">
-            <!-- Polaroid 1 -->
-            <div class="polaroid" onclick="openModal('Pink Suit Apsara', 'The stunning pink suit moment when you looked like an absolute divine vision.')">
+            <!-- 1. Pink Suit -->
+            <div class="polaroid" onclick="openModal('Pink Suit Apsara[cite: 37]', 'The stunning pink suit moment when you looked like an absolute divine vision[cite: 37].')">
                 <div class="polaroid-img-frame">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Pink Suit">
+                    <img src="1000219413_3.jpg" alt="Pink Suit">
                 </div>
                 <div class="polaroid-caption">Pink Suit Magic ✨</div>
             </div>
 
-            <!-- Polaroid 2 -->
-            <div class="polaroid" onclick="openModal('Nainital Vibe & Winter Coat', 'Cold winter breeze, black coat, and your gorgeous smile.')">
+            <!-- 2. Winter Coat -->
+            <div class="polaroid" onclick="openModal('Nainital Vibe & Winter Coat[cite: 38]', 'Cold winter breeze, black coat, and your gorgeous smile[cite: 38].')">
                 <div class="polaroid-img-frame">
-                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Winter Coat">
+                    <img src="1000219411_3.jpg" alt="Winter Coat">
                 </div>
                 <div class="polaroid-caption">Winter & Coat Vibe 🧥</div>
             </div>
 
-            <!-- Polaroid 3 -->
-            <div class="polaroid" onclick="openModal('Cafe Lean & Head on Shoulder', 'Leaning closely together with cozy lights and endless comfort.')">
+            <!-- 3. Cafe Lean -->
+            <div class="polaroid" onclick="openModal('Cafe Lean & Head on Shoulder[cite: 35]', 'Leaning closely together with cozy lights and endless comfort[cite: 35].')">
                 <div class="polaroid-img-frame">
-                    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=600&q=80" alt="Cafe Lean">
+                    <img src="1000219425_3.jpg" alt="Cafe Lean">
                 </div>
                 <div class="polaroid-caption">Cafe Moments ☕</div>
             </div>
 
-            <!-- Polaroid 4 -->
-            <div class="polaroid" onclick="openModal('Elevator Date with Roses', 'Holding a bouquet of red roses, looking into each other eyes.')">
+            <!-- 4. Elevator Roses -->
+            <div class="polaroid" onclick="openModal('Elevator Date with Roses[cite: 34]', 'Holding a bouquet of red roses, looking into each other eyes[cite: 34].')">
                 <div class="polaroid-img-frame">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80" alt="Elevator Roses">
+                    <img src="1000219424_3.jpg" alt="Elevator Roses">
                 </div>
                 <div class="polaroid-caption">Elevator Roses 🌹</div>
             </div>
 
-            <!-- Polaroid 5 -->
-            <div class="polaroid" onclick="openModal('Royal Ethnic Lift-Up', 'Kurta and Lehenga royal vibes under the starry night beside the Enfield.')">
+            <!-- 5. Royal Lift -->
+            <div class="polaroid" onclick="openModal('Royal Ethnic Lift-Up[cite: 40]', 'Kurta and Lehenga royal vibes under the starry night beside the Enfield[cite: 40].')">
                 <div class="polaroid-img-frame">
-                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=80" alt="Royal Lift">
+                    <img src="1000216612_3.jpg" alt="Royal Lift">
                 </div>
                 <div class="polaroid-caption">Royal Couple 👑</div>
             </div>
 
-            <!-- Polaroid 6 -->
-            <div class="polaroid" onclick="openModal('Rickshaw Wind & Car Pouts', 'Wild messy hair, road trips, and laughing out loud.')">
+            <!-- 6. Cafe Hug -->
+            <div class="polaroid" onclick="openModal('Warm Cafe Hug[cite: 41]', 'A tight, cozy, and loving embrace at the cafe[cite: 41].')">
                 <div class="polaroid-img-frame">
-                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80" alt="Car Pout">
+                    <img src="1000219420_2.jpg" alt="Cafe Hug">
                 </div>
-                <div class="polaroid-caption">Messy Hair & Laughs 💨</div>
+                <div class="polaroid-caption">Warm Hugs 🤗</div>
             </div>
 
-            <!-- Polaroid 7 -->
-            <div class="polaroid" onclick="openModal('Sweet Cheek Kiss', 'A warm, affectionate cheek kiss capturing our purest bond.')">
+            <!-- 7. Cheek Kiss -->
+            <div class="polaroid" onclick="openModal('Sweet Cheek Kiss[cite: 36]', 'A warm, affectionate cheek kiss capturing our purest bond[cite: 36].')">
                 <div class="polaroid-img-frame">
-                    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=600&q=80" alt="Cheek Kiss">
+                    <img src="1000219422_3.jpg" alt="Cheek Kiss">
                 </div>
                 <div class="polaroid-caption">Endless Kisses 💕</div>
             </div>
 
-            <!-- Polaroid 8 -->
-            <div class="polaroid" onclick="openModal('Long Distance Video Call', 'Floating magical hearts on screen while talking late into the night.')">
+            <!-- 8. Cinema Kiss -->
+            <div class="polaroid" onclick="openModal('Cinema Date Moment[cite: 32]', 'Movie theatre lights, red ambient glow, and sweet kisses[cite: 32].')">
                 <div class="polaroid-img-frame">
-                    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=600&q=80" alt="Video Call">
+                    <img src="1000219429_3.jpg" alt="Cinema Date">
                 </div>
-                <div class="polaroid-caption">Late Night Calls ✨</div>
+                <div class="polaroid-caption">Cinema Date 🎬</div>
             </div>
         </div>
     </section>
 
-    <!-- Shayari & Poetry Corner -->
     <section id="poetry">
         <div class="section-title">
             <h2>Shayari & Poetries</h2>
@@ -973,7 +946,6 @@
         </div>
     </section>
 
-    <!-- Relationship Lore Quiz -->
     <section id="quiz">
         <div class="section-title">
             <h2>The Hk-Gaurii Lore Quiz</h2>
@@ -987,7 +959,6 @@
         </div>
     </section>
 
-    <!-- Future Dreams Map -->
     <section id="future">
         <div class="section-title">
             <h2>Our Future Map</h2>
@@ -1013,7 +984,6 @@
         </div>
     </section>
 
-    <!-- Secret Letter Envelope -->
     <section id="letter">
         <div class="section-title">
             <h2>The 9-Month Anniversary Letter</h2>
@@ -1040,7 +1010,6 @@
         </div>
     </section>
 
-    <!-- Modal Lightbox -->
     <div class="modal" id="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal()">&times;</span>
@@ -1049,7 +1018,6 @@
         </div>
     </div>
 
-    <!-- JavaScript Logic -->
     <script>
         const canvas = document.getElementById('stars-canvas');
         const ctx = canvas.getContext('2d');
