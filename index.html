@@ -442,6 +442,12 @@
             position: relative;
         }
 
+        .polaroid-img-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .polaroid-caption {
             font-family: var(--font-hand);
             font-size: 1.5rem;
@@ -449,27 +455,6 @@
             text-align: center;
             margin-top: 15px;
             font-weight: 700;
-        }
-
-        /* SVG Illustrative Placeholder styling */
-        .svg-art {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background: radial-gradient(circle, #3a0a10, #160507);
-            color: var(--gold-light);
-            padding: 20px;
-            text-align: center;
-        }
-
-        .svg-art i {
-            font-size: 3rem;
-            color: var(--rose-red);
-            margin-bottom: 15px;
-            filter: drop-shadow(0 0 10px rgba(223, 168, 87, 0.6));
         }
 
         /* Poetry Chamber */
@@ -771,7 +756,6 @@
         </div>
 
         <div class="timeline">
-            <!-- Item 1 -->
             <div class="timeline-item left">
                 <div class="timeline-content">
                     <div class="timeline-date">8th August 2025</div>
@@ -780,7 +764,6 @@
                 </div>
             </div>
 
-            <!-- Item 2 -->
             <div class="timeline-item right">
                 <div class="timeline-content">
                     <div class="timeline-date">Late August 2025</div>
@@ -789,7 +772,6 @@
                 </div>
             </div>
 
-            <!-- Item 3 -->
             <div class="timeline-item left">
                 <div class="timeline-content">
                     <div class="timeline-date">30th November 2025</div>
@@ -798,7 +780,6 @@
                 </div>
             </div>
 
-            <!-- Item 4 -->
             <div class="timeline-item right">
                 <div class="timeline-content">
                     <div class="timeline-date">December 2025</div>
@@ -807,7 +788,6 @@
                 </div>
             </div>
 
-            <!-- Item 5 -->
             <div class="timeline-item left">
                 <div class="timeline-content">
                     <div class="timeline-date">25th January 2026 • 7:17 AM</div>
@@ -816,7 +796,6 @@
                 </div>
             </div>
 
-            <!-- Item 6 -->
             <div class="timeline-item right">
                 <div class="timeline-content">
                     <div class="timeline-date">7th February 2026</div>
@@ -825,7 +804,6 @@
                 </div>
             </div>
 
-            <!-- Item 7 -->
             <div class="timeline-item left">
                 <div class="timeline-content">
                     <div class="timeline-date">25th October 2026</div>
@@ -844,7 +822,6 @@
         </div>
 
         <div class="games-grid">
-            <!-- Game 1 -->
             <div class="game-card">
                 <h3>Ragebait vs. Little Baby Meter</h3>
                 <p>Track how fast Gaurii transitions from giving Maharani orders to demanding cuddles!</p>
@@ -856,7 +833,6 @@
                 <p id="meter-status" style="margin-top: 15px; font-weight: 600; color: var(--pink-soft);">Status: Perfectly Balanced Cutie</p>
             </div>
 
-            <!-- Game 2 -->
             <div class="game-card">
                 <h3>Energy Capsule Injector</h3>
                 <p>When Gaurii says: "Pyaar kro mujhe, I need your love, it's my energy capsule!"</p>
@@ -873,74 +849,72 @@
     <section id="gallery">
         <div class="section-title">
             <h2>Our Memories Museum</h2>
-            <p>Interactive polaroid scrapbook of all our captured chapters</p>
+            <p>Interactive polaroid scrapbook of all our real moments together</p>
         </div>
 
         <div class="gallery-grid">
-            <!-- Polaroid 1 -->
-            <div class="polaroid" onclick="openModal('First Meet — Chelvies Cafe', '30th Nov 2025: Holding hands and leaning on shoulders.')">
+            <!-- Photo 1: Pink Suit -->
+            <div class="polaroid" onclick="openModal('Pink Suit Apsara', 'The stunning pink suit moment when you looked like an absolute divine vision.')">
                 <div class="polaroid-img-frame">
-                    <div class="svg-art">
-                        <i class="fa-solid fa-mug-hot"></i>
-                        <span>Chelvies Cafe First Meet</span>
-                    </div>
-                </div>
-                <div class="polaroid-caption">1st Meet — Chelvies ☕</div>
-            </div>
-
-            <!-- Polaroid 2 -->
-            <div class="polaroid" onclick="openModal('The Pink Suit Confession', 'The night you looked like an absolute divine apsara.')">
-                <div class="polaroid-img-frame">
-                    <div class="svg-art">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
-                        <span>Pink Suit Apsara</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Pink Suit">
                 </div>
                 <div class="polaroid-caption">Pink Suit Magic ✨</div>
             </div>
 
-            <!-- Polaroid 3 -->
-            <div class="polaroid" onclick="openModal('Nainital & Kainchi Trip', 'Cold breeze, black coat, and emotional bonding.')">
+            <!-- Photo 2: Black Coat & Sweater -->
+            <div class="polaroid" onclick="openModal('Nainital Vibe & Winter Coat', 'Cold winter breeze, black coat, and your gorgeous smile.')">
                 <div class="polaroid-img-frame">
-                    <div class="svg-art">
-                        <i class="fa-solid fa-mountain"></i>
-                        <span>Nainital Trip</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Winter Coat">
                 </div>
-                <div class="polaroid-caption">Nainital Vibe 🏔️</div>
+                <div class="polaroid-caption">Winter & Coat Vibe 🧥</div>
             </div>
 
-            <!-- Polaroid 4 -->
-            <div class="polaroid" onclick="openModal('1st Date — Bon Amigos', '7th Feb 2026: Royal kisses & endless holding hands.')">
+            <!-- Photo 3: Cafe Lean -->
+            <div class="polaroid" onclick="openModal('Cafe Lean & Head on Shoulder', 'Leaning closely together with cozy lights and endless comfort.')">
                 <div class="polaroid-img-frame">
-                    <div class="svg-art">
-                        <i class="fa-solid fa-utensils"></i>
-                        <span>Bon Amigos Date</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=600&q=80" alt="Cafe Lean">
                 </div>
-                <div class="polaroid-caption">1st Date — Bon Amigos 🌹</div>
+                <div class="polaroid-caption">Cafe Moments ☕</div>
             </div>
 
-            <!-- Polaroid 5 -->
-            <div class="polaroid" onclick="openModal('Garba Ethnic Royalty', 'Hk in Kurta & Gaurii in Lehenga—Absolute Couple Goals.')">
+            <!-- Photo 4: Elevator Roses -->
+            <div class="polaroid" onclick="openModal('Elevator Date with Roses', 'Holding a bouquet of red roses, looking into each other eyes.')">
                 <div class="polaroid-img-frame">
-                    <div class="svg-art">
-                        <i class="fa-solid fa-crown"></i>
-                        <span>Ethnic Garba Night</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80" alt="Elevator Roses">
+                </div>
+                <div class="polaroid-caption">Elevator Roses 🌹</div>
+            </div>
+
+            <!-- Photo 5: Royal Lift -->
+            <div class="polaroid" onclick="openModal('Royal Ethnic Lift-Up', 'Kurta and Lehenga royal vibes under the starry night beside the Enfield.')">
+                <div class="polaroid-img-frame">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=80" alt="Royal Lift">
                 </div>
                 <div class="polaroid-caption">Royal Couple 👑</div>
             </div>
 
-            <!-- Polaroid 6 -->
-            <div class="polaroid" onclick="openModal('Rickshaw Wind & Car Pouts', 'Wild messy hair, road trips, and laughing out loud.')">
+            <!-- Photo 6: Pout & Red Light -->
+            <div class="polaroid" onclick="openModal('Car Red Light Pout', 'Cute cheeks, red ambient light, and mischievous pouts in the back seat.')">
                 <div class="polaroid-img-frame">
-                    <div class="svg-art">
-                        <i class="fa-solid fa-car-side"></i>
-                        <span>Car & Rickshaw Fun</span>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80" alt="Car Pout">
                 </div>
-                <div class="polaroid-caption">Messy Hair & Laughs 💨</div>
+                <div class="polaroid-caption">Red Light Pouts 🚗</div>
+            </div>
+
+            <!-- Photo 7: Cheek Kiss -->
+            <div class="polaroid" onclick="openModal('Sweet Cheek Kiss', 'A warm, affectionate cheek kiss capturing our purest bond.')">
+                <div class="polaroid-img-frame">
+                    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=600&q=80" alt="Cheek Kiss">
+                </div>
+                <div class="polaroid-caption">Endless Kisses 💕</div>
+            </div>
+
+            <!-- Photo 8: Video Call Hearts -->
+            <div class="polaroid" onclick="openModal('Long Distance Video Call', 'Floating magical hearts on screen while talking late into the night.')">
+                <div class="polaroid-img-frame">
+                    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=600&q=80" alt="Video Call">
+                </div>
+                <div class="polaroid-caption">Late Night Calls ✨</div>
             </div>
         </div>
     </section>
@@ -953,7 +927,6 @@
         </div>
 
         <div class="poetry-grid">
-            <!-- Poetry 1 -->
             <div class="poetry-card">
                 <div class="poetry-lines">
                     Meri inn band aankhon ka sbse haseen khwaab ho tum,
@@ -964,7 +937,6 @@
                 <div class="poetry-author">— Hk</div>
             </div>
 
-            <!-- Poetry 2 -->
             <div class="poetry-card">
                 <div class="poetry-lines">
                     Woh waqt kya jo aapke saath guzra na ho,
@@ -977,7 +949,6 @@
                 <div class="poetry-author">— Hk</div>
             </div>
 
-            <!-- Poetry 3 -->
             <div class="poetry-card">
                 <div class="poetry-lines">
                     Aapke kareeb aata hoon toh sab kuch dheere sa lagta hai,
@@ -988,7 +959,6 @@
                 <div class="poetry-author">— Hk</div>
             </div>
 
-            <!-- Poetry 4 -->
             <div class="poetry-card">
                 <div class="poetry-lines">
                     Agar kabhi aap udaas ho toh main wajah ban jaun,
@@ -1081,7 +1051,6 @@
 
     <!-- JavaScript Logic -->
     <script>
-        // 1. Stars Background Canvas Setup
         const canvas = document.getElementById('stars-canvas');
         const ctx = canvas.getContext('2d');
         let stars = [];
@@ -1125,7 +1094,6 @@
         resizeCanvas();
         drawStars();
 
-        // 2. Floating Hearts
         const heartsBox = document.getElementById('hearts-box');
         const heartIcons = ['fa-heart', 'fa-sparkles', 'fa-hand-holding-heart'];
         for (let i = 0; i < 25; i++) {
@@ -1137,7 +1105,6 @@
             heartsBox.appendChild(heart);
         }
 
-        // 3. Anniversary Counter (Since Jan 25, 2026, 7:17 AM)
         const startDate = new Date('2026-01-25T07:17:00').getTime();
 
         function updateTimer() {
@@ -1157,7 +1124,6 @@
         setInterval(updateTimer, 1000);
         updateTimer();
 
-        // 4. Mini Game Functions
         let babyVal = 50;
         function adjustMeter(val) {
             babyVal = Math.min(100, Math.max(0, babyVal + val));
@@ -1182,7 +1148,6 @@
             });
         }
 
-        // 5. Quiz Data & Handler
         const quizData = [
             {
                 q: "Where did we have our very first meeting in person?",
@@ -1255,7 +1220,6 @@
         }
         loadQuiz();
 
-        // 6. Modal Functions
         function openModal(title, desc) {
             document.getElementById('modal-title').innerText = title;
             document.getElementById('modal-desc').innerText = desc;
@@ -1266,7 +1230,6 @@
             document.getElementById('modal').style.display = 'none';
         }
 
-        // 7. Secret Letter Toggle
         function openLetter() {
             const letter = document.getElementById('secret-letter');
             letter.style.display = 'block';
@@ -1278,7 +1241,6 @@
             });
         }
 
-        // 8. Audio Toggle Placeholder
         let isPlaying = false;
         function toggleAudio() {
             const btn = document.getElementById('play-btn');
